@@ -13,7 +13,6 @@ export default {
   props: {
     id: String
   },
-  apollo: {},
   methods: {
     onClick() {
       this.$apollo.mutate({

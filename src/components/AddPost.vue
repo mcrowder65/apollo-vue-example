@@ -25,7 +25,6 @@ export default {
       adding: false
     };
   },
-  apollo: {},
 
   methods: {
     setAdding(adding) {
