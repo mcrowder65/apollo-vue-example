@@ -1,27 +1,29 @@
 <template>
   <div>
     <md-card class="card">
-      <form>
-        <md-field>
-          <label>Title</label>
-          <md-input v-model="localTitle" />
-        </md-field>
-        <br />
-        <md-field>
-          <label>Body</label>
-          <md-textarea v-model="localBody" md-autogrow />
-        </md-field>
-      </form>
+      <md-field>
+        <label>Title</label>
+        <md-input v-model="localTitle" />
+      </md-field>
+      <br />
+      <md-field>
+        <label>Body</label>
+        <md-textarea v-model="localBody" md-autogrow />
+      </md-field>
+      <DeletePost v-bind:id="id" />
     </md-card>
   </div>
 </template>
 
 <script>
+import DeletePost from "./DeletePost";
 export default {
   name: "PostEditor",
+  components: { DeletePost },
   props: {
     title: String,
-    body: String
+    body: String,
+    id: String
   },
   data: props => {
     return {

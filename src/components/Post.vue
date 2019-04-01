@@ -1,5 +1,5 @@
 <template>
-  <PostEditor v-bind:title="title" v-bind:body="body" />
+  <PostEditor v-bind:title="title" v-bind:body="body" v-bind:id="id" />
 </template>
 
 <script>
