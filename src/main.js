@@ -3,7 +3,7 @@ import App from "./App.vue";
 import VueMaterial from "vue-material";
 import "vue-material/dist/vue-material.min.css";
 import VueApollo from "vue-apollo";
-
+import "vue-material/dist/theme/default.css";
 import { ApolloClient } from "apollo-client";
 import { HttpLink } from "apollo-link-http";
 import { InMemoryCache } from "apollo-cache-inmemory";
