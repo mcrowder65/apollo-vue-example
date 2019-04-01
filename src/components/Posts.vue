@@ -1,5 +1,6 @@
 <template>
   <div>
+    <AddPost />
     <div v-if="$apollo.loading">Loading...</div>
     <div v-for="post in posts" v-bind:key="post.id">
       <Post
@@ -14,10 +15,11 @@
 <script>
 import { GET_POSTS } from "../graphql/queries";
 import Post from "./Post";
+import AddPost from "./AddPost";
 
 export default {
   name: "Posts",
-  components: { Post },
+  components: { AddPost, Post },
   apollo: {
     posts: GET_POSTS
   }

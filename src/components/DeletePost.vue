@@ -15,7 +15,7 @@ export default {
   },
   apollo: {},
   methods: {
-    async onClick() {
+    onClick() {
       this.$apollo.mutate({
         mutation: DELETE_POST,
         variables: {

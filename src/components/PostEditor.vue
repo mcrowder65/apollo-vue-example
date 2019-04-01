@@ -10,20 +10,24 @@
         <label>Body</label>
         <md-textarea v-model="localBody" md-autogrow />
       </md-field>
-      <DeletePost v-bind:id="id" />
+      <div v-if="submit">
+        <md-button @click="() => submit(localTitle, localBody)"
+          >Submit</md-button
+        >
+      </div>
     </md-card>
   </div>
 </template>
 
 <script>
-import DeletePost from "./DeletePost";
 export default {
   name: "PostEditor",
-  components: { DeletePost },
+  components: {},
   props: {
     title: String,
     body: String,
-    id: String
+    id: String,
+    submit: Function
   },
   data: props => {
     return {
